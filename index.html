@@ -77,11 +77,21 @@ button{cursor:pointer}
 .mealhero{position:relative;overflow:hidden;background:linear-gradient(135deg,#7c0010,#d51d35);color:#fff;border-radius:24px;padding:22px;min-height:210px}
 .mealhero:after{content:"🍲";position:absolute;right:12px;bottom:-20px;font-size:130px;opacity:.13}
 .mealfilters{display:flex;gap:7px;overflow:auto;padding:12px 0}.mealfilters button{white-space:nowrap}
-.app .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.app .meal{overflow:hidden;padding:0;background:#101010;border:1px solid #292929;border-radius:20px}
-.app .meal-img{height:160px;position:relative;background:#181818}.app .meal-img img{width:100%;height:100%;object-fit:cover;display:block}.app .meal-body{padding:14px}
-.app .meal h3{font-size:16px;margin:8px 0 5px}.app .meal p{font-size:11px;margin:0;color:#999}.app .meal-meta{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.pricebar{font-size:10px;font-weight:950;color:#ffd56e;background:rgba(255,200,87,.12);border:1px solid rgba(255,200,87,.15);border-radius:999px;padding:6px 8px}
-.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.time-card{background:#151515;border:1px solid #292929;border-radius:16px;padding:12px}.time-card b{display:block;color:#ff6c79;font-size:10px}.time-card strong{display:block;margin:5px 0;font-size:13px}.time-card .muted{color:#999}
+.app .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+#meals{background:transparent;border:0;padding:0;box-shadow:none}
+.meal-screen{position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(circle at 92% 8%,rgba(255,48,69,.22),transparent 28%),linear-gradient(145deg,#171717,#080808 70%);border:1px solid #2d2d2d;padding:18px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.meal-screen:before{content:"";position:absolute;inset:-80px auto auto -80px;width:220px;height:220px;background:rgba(41,214,111,.08);filter:blur(45px);border-radius:50%;pointer-events:none}
+.meal-screen>*{position:relative;z-index:1}
+.meal-screen-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}
+.meal-screen-kicker{color:#ff6b79;font-size:10px;font-weight:950;letter-spacing:.12em;text-transform:uppercase}
+.meal-screen h2{font-size:32px;line-height:1;letter-spacing:-.055em;margin:7px 0 7px}.meal-screen-intro{color:#999;font-size:12px;line-height:1.55;max-width:520px;margin:0}
+.meal-search{display:flex;gap:8px;margin:14px 0}.meal-search input{flex:1;background:#111;border:1px solid #303030;color:#fff;border-radius:15px;padding:13px 14px;outline:none}.meal-search button{border-radius:15px;padding:0 15px}
+.mealfilters{display:flex;gap:7px;overflow:auto;padding:4px 0 14px;scrollbar-width:none}.mealfilters::-webkit-scrollbar{display:none}.mealfilters button{white-space:nowrap}
+.meal-feature{display:grid;grid-template-columns:1.15fr .85fr;gap:0;overflow:hidden;border:1px solid #343434;border-radius:22px;background:#101010;margin-bottom:16px;box-shadow:0 18px 45px rgba(0,0,0,.28)}
+.meal-feature-img{min-height:250px;position:relative;overflow:hidden}.meal-feature-img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08)}.meal-feature-img:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 45%,rgba(0,0,0,.45))}.feature-badge{position:absolute;left:13px;top:13px;z-index:2;background:rgba(255,48,69,.92);border-radius:999px;padding:7px 9px;font-size:9px;font-weight:950}.meal-feature-copy{padding:22px;display:flex;flex-direction:column;justify-content:center}.meal-feature-copy .rating{color:#ffc857;font-size:11px;font-weight:900}.meal-feature-copy h3{font-size:25px;letter-spacing:-.045em;margin:9px 0 6px}.meal-feature-copy p{font-size:11px;line-height:1.5;color:#999;margin:0}.feature-meta{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.feature-chip{border:1px solid #303030;background:#171717;border-radius:999px;padding:7px 9px;font-size:10px;color:#ddd}.feature-chip strong{color:#fff}.time-panel{background:linear-gradient(135deg,#151515,#0d0d0d);border:1px solid #2b2b2b;border-radius:22px;padding:15px;margin-bottom:16px}.time-panel-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:11px}.time-panel-head b{font-size:13px}.time-panel-head span{font-size:10px;color:#888}.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.time-card{background:#111;border:1px solid #292929;border-radius:16px;padding:12px}.time-card b{display:block;color:#ff6c79;font-size:9px;letter-spacing:.08em}.time-card strong{display:block;margin:6px 0 3px;font-size:13px}.time-card .muted{color:#999;font-size:10px}.time-card .time-budget{color:#ffc857;font-size:9px;font-weight:900;margin-top:7px}
+.meal-section-head{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:18px 0 10px}.meal-section-head h3{margin:0;font-size:18px;letter-spacing:-.04em}.meal-section-head span{font-size:10px;color:#888}.meal-categories{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:16px}.meal-cat{position:relative;height:88px;overflow:hidden;border-radius:16px;border:1px solid #2c2c2c;background:#111}.meal-cat img{width:100%;height:100%;object-fit:cover;display:block;opacity:.82}.meal-cat:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 65%)}.meal-cat b{position:absolute;left:9px;bottom:8px;z-index:2;font-size:10px}.app .meal{overflow:hidden;padding:0;background:#101010;border:1px solid #292929;border-radius:21px;box-shadow:0 16px 35px rgba(0,0,0,.18);transition:.2s}.app .meal:hover{transform:translateY(-2px);border-color:#414141}.app .meal-img{height:185px;position:relative;background:#181818}.app .meal-img:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent 50%);pointer-events:none}.app .meal-img img{width:100%;height:100%;object-fit:cover;display:block}.meal-fav{position:absolute;right:10px;top:10px;z-index:2;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);color:#fff}.app .meal-body{padding:14px}.meal-body-top{display:flex;justify-content:space-between;align-items:center;gap:7px}.app .meal h3{font-size:16px;margin:9px 0 5px;letter-spacing:-.025em}.app .meal p{font-size:11px;line-height:1.45;margin:0;color:#999}.app .meal-meta{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}.pricebar{font-size:10px;font-weight:950;color:#ffd56e;background:rgba(255,200,87,.12);border:1px solid rgba(255,200,87,.15);border-radius:999px;padding:6px 8px}
+.meal-empty{padding:25px;text-align:center;color:#888;border:1px dashed #333;border-radius:18px;grid-column:1/-1}
+
 .notice{padding:12px;border-radius:13px;background:rgba(255,48,69,.1);color:#ffadb5;border:1px solid rgba(255,48,69,.15);font-size:12px;margin-top:10px}
 .modal{display:none;position:fixed;inset:0;background:#000b;align-items:flex-end;z-index:20}.modal.open{display:flex}.sheet{background:#111;width:100%;max-width:720px;margin:auto;border-radius:26px 26px 0 0;padding:22px 18px 30px;border:1px solid #2b2b2b}.sheet-close{float:right}
 .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:#fff;color:#111;padding:11px 14px;border-radius:999px;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -92,6 +102,11 @@ button{cursor:pointer}
 @media(max-width:520px){
   .nav{padding:17px 16px}.hero,.section{padding-left:16px;padding-right:16px}.hero h1{font-size:52px}.hero-visual{min-height:390px}.glass{padding:12px}.track{top:18px;width:178px}.offer{bottom:65px;width:178px}.location-bar{left:12px;right:12px;bottom:12px}.location-bar .btn{padding:10px 12px}.meal-strip{grid-template-columns:1fr 1fr;gap:10px}.mini-food{height:180px}.plan-grid,.time-grid{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr}.app .grid{grid-template-columns:1fr 1fr}.app .meal-img{height:135px}
 }
+
+.category-strip{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;overflow:auto;padding-bottom:8px}.category-card{min-width:110px;background:#111;border:1px solid #282828;border-radius:16px;padding:9px}.category-card.active{border-color:var(--red);box-shadow:0 0 0 1px rgba(255,48,69,.18)}.category-card img{width:100%;height:78px;object-fit:cover;border-radius:11px;display:block;margin-bottom:9px}.category-card b{font-size:11px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.popular-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.popular-card{background:#111;border:1px solid #292929;border-radius:20px;overflow:hidden}.popular-card img{width:100%;height:190px;object-fit:cover;display:block}.popular-card>div{padding:14px}.popular-card h3{font-size:16px;margin:0 0 6px;letter-spacing:-.03em}.popular-card small{display:block;color:#999;font-size:11px}.popular-card strong{display:block;margin-top:10px;font-size:15px;color:#fff}.service-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#101010;border:1px solid #292929;border-radius:22px;padding:18px}.service-item{display:flex;gap:10px;align-items:center}.service-item .ico{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#171717;font-size:18px}.service-item b{display:block;font-size:12px}.service-item span{display:block;color:#888;font-size:10px;margin-top:3px}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:35px}.hero-copy{order:1}.hero-visual{order:2;min-height:460px}.meal-strip{grid-template-columns:repeat(2,1fr)}.popular-grid{grid-template-columns:repeat(2,1fr)}.category-strip{grid-template-columns:repeat(4,1fr)}.service-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.meal-screen{padding:14px;border-radius:24px}.meal-screen-top{display:block}.meal-screen-top>.tag{display:inline-flex;margin-top:10px}.meal-screen h2{font-size:28px}.meal-search{flex-direction:column}.meal-search button{padding:12px}.meal-feature{grid-template-columns:1fr}.meal-feature-img{min-height:220px}.meal-feature-copy{padding:17px}.meal-feature-copy h3{font-size:22px}.meal-categories{grid-template-columns:repeat(2,1fr)}.meal-cat{height:82px}.time-grid{grid-template-columns:1fr}.app .grid{grid-template-columns:1fr 1fr}.app .meal-img{height:145px}.meal-screen .tag{font-size:9px}.meal-body{padding:12px!important}.app .meal h3{font-size:14px}.app .meal p{font-size:10px}}
+@media(max-width:560px){.nav{padding:16px}.hero{padding:34px 16px 16px}.hero h1{font-size:48px}.hero-visual{min-height:420px}.glass.track,.glass.offer{right:8px;width:185px}.location-bar{left:12px;right:12px}.meal-strip{grid-template-columns:1fr 1fr;gap:9px}.mini-food{height:180px}.popular-grid{grid-template-columns:1fr 1fr;gap:9px}.popular-card img{height:145px}.popular-card>div{padding:10px}.category-strip{grid-template-columns:repeat(4,1fr)}.category-card{min-width:90px}.category-card img{height:64px}.service-strip{grid-template-columns:1fr 1fr}.service-item{align-items:flex-start}}
 </style>
 </head>
 <body>
@@ -104,22 +119,23 @@ button{cursor:pointer}
 
 <div class="hero">
   <div class="hero-copy">
-    <span class="eyebrow">🇳🇬 Built for Nigerian kitchens</span>
-    <h1>Got food? Let’s make <span>something.</span></h1>
-    <p>From what’s in your kitchen to what’s on your plate. Find practical Nigerian meals that fit your ingredients, your time and your budget.</p>
+    <span class="eyebrow">🇳🇬 🇳🇬 Nigeria's smart food companion</span>
+    <h1>Delicious meals,
+<span>made for you.</span></h1>
+    <p>From your favourite local meals to practical everyday ideas. Fast, relatable and budget-aware — built for Nigerian kitchens.</p>
     <div class="actions">
-      <button class="btn primary" onclick="enterApp()">Start cooking →</button>
-      <button class="btn" onclick="document.getElementById('ideas').scrollIntoView({behavior:'smooth'})">Explore meals</button>
+      <button class="btn primary" onclick="enterApp()">Find meals →</button>
+      <button class="btn" onclick="document.getElementById('ideas').scrollIntoView({behavior:'smooth'})">View meal ideas</button>
     </div>
     <div class="pills">
-      <span class="pill">🍚 Everyday meals</span><span class="pill">₦ Budget-aware</span>
-      <span class="pill">⚡ Quick options</span><span class="pill">🛒 Use what you have</span>
+      <span class="pill">📍 Near me</span><span class="pill">🥗 Healthy</span>
+      <span class="pill">🇳🇬 Nigerian meals</span><span class="pill">⭐ Top rated</span>
     </div>
   </div>
 
   <div class="hero-visual">
     <div class="hero-food">
-      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_jollof_rice.jpg" alt="Nigerian jollof rice with chicken and plantain">
+      <img src="assets/jollof.jpg" alt="Nigerian jollof rice with chicken and plantain">
     </div>
     <div class="glass track">
       <strong><span class="dot"></span>Kitchen match</strong>
@@ -145,10 +161,34 @@ button{cursor:pointer}
     <p>Real Nigerian dishes, presented clearly so the picture, meal name and recommendation always make sense together.</p>
   </div>
   <div class="meal-strip">
-    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_jollof_rice.jpg" alt="Jollof rice"><div><b>Jollof Rice</b><small>Everyday favourite</small></div></div>
-    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Original_Nigerian_Egusi_soup_and_yellow_garri_(Eba).jpg" alt="Egusi soup and eba"><div><b>Egusi & Eba</b><small>Rich & filling</small></div></div>
-    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Suya.jpg" alt="Nigerian suya"><div><b>Suya</b><small>Quick treat</small></div></div>
-    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pounded_Yam_and_Egusi_Soup.jpg" alt="Pounded yam and egusi soup"><div><b>Pounded Yam & Egusi</b><small>Family lunch</small></div></div>
+    <div class="mini-food"><img src="assets/jollof.jpg" alt="Jollof rice"><div><b>Jollof Rice</b><small>Everyday favourite</small></div></div>
+    <div class="mini-food"><img src="assets/egusi.jpg" alt="Egusi soup and eba"><div><b>Egusi & Eba</b><small>Rich & filling</small></div></div>
+    <div class="mini-food"><img src="assets/suya.jpg" alt="Nigerian suya"><div><b>Suya</b><small>Quick treat</small></div></div>
+    <div class="mini-food"><img src="assets/egusi.jpg" alt="Pounded yam and egusi soup"><div><b>Pounded Yam & Egusi</b><small>Family lunch</small></div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:8px">
+  <div class="section-head"><div><span class="eyebrow">Explore</span><h2>What are you craving?</h2></div><p>Browse by the kind of food you actually want right now.</p></div>
+  <div class="category-strip">
+    <div class="category-card active"><img src="assets/cat-jollof.jpg"><b>Nigerian Meals</b></div>
+    <div class="category-card"><img src="assets/cat-soup.jpg"><b>Swallow & Soups</b></div>
+    <div class="category-card"><img src="assets/cat-rice.jpg"><b>Rice Dishes</b></div>
+    <div class="category-card"><img src="assets/cat-fast.jpg"><b>Fast Food</b></div>
+    <div class="category-card"><img src="assets/cat-drinks.jpg"><b>Drinks</b></div>
+    <div class="category-card"><img src="assets/cat-healthy.jpg"><b>Healthy Eats</b></div>
+    <div class="category-card"><img src="assets/cat-chops.jpg"><b>Small Chops</b></div>
+    <div class="category-card"><img src="assets/cat-dessert.jpg"><b>Desserts</b></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:8px">
+  <div class="section-head"><div><span class="eyebrow">Popular</span><h2>Popular near you</h2></div><p>Familiar Nigerian favourites, presented with clear time and budget cues.</p></div>
+  <div class="popular-grid">
+    <article class="popular-card"><img src="assets/jollof.jpg"><div><h3>Jollof Rice & Chicken</h3><small>Everyday favourite · 30–40 min</small><strong>₦3,500</strong></div></article>
+    <article class="popular-card"><img src="assets/amala.jpg"><div><h3>Amala & Ewedu</h3><small>Yoruba classic · 25–35 min</small><strong>₦2,800</strong></div></article>
+    <article class="popular-card"><img src="assets/egusi.jpg"><div><h3>Egusi Soup & Pounded Yam</h3><small>Family lunch · 30–45 min</small><strong>₦3,000</strong></div></article>
+    <article class="popular-card"><img src="assets/suya.jpg"><div><h3>Suya Platter</h3><small>Quick treat · 20–30 min</small><strong>₦2,500</strong></div></article>
   </div>
 </section>
 
@@ -181,6 +221,15 @@ button{cursor:pointer}
   </div>
 </section>
 
+<section class="section" style="padding-top:8px">
+  <div class="service-strip">
+    <div class="service-item"><div class="ico">🚚</div><div><b>Fast & practical</b><span>Meal ideas for real schedules</span></div></div>
+    <div class="service-item"><div class="ico">❤️</div><div><b>Made for you</b><span>Based on your kitchen and taste</span></div></div>
+    <div class="service-item"><div class="ico">₦</div><div><b>Budget-aware</b><span>Options for everyday budgets</span></div></div>
+    <div class="service-item"><div class="ico">🛡️</div><div><b>Simple & secure</b><span>Your MVP data stays on-device</span></div></div>
+  </div>
+</section>
+
 <section class="section">
   <div class="download"><span class="eyebrow" style="background:#fff;color:#a90018">COMING TO MOBILE</span><h2 style="margin-top:12px;color:#fff">FeedMe in your pocket.</h2>
     <p>Save meal ideas, track your kitchen stock and plan your day wherever you are.</p>
@@ -197,28 +246,41 @@ button{cursor:pointer}
 <div class="tabs"><button class="btn active" onclick="tab('home',this)">Home</button><button class="btn" onclick="tab('stock',this)">My Stock</button><button class="btn" onclick="tab('meals',this)">Meal Ideas</button><button class="btn" onclick="tab('history',this)">History</button></div>
 <section id="home" class="card"><div class="actions"><button class="btn" onclick="setMode('store')">🏠 No shopping</button><button class="btn" onclick="setMode('quick')">⚡ 30 mins</button><button class="btn" onclick="setMode('budget')">₦ Everyday budget</button></div><div id="rec"></div></section>
 <section id="stock" class="card hidden"><h2>Food in stock</h2><p class="muted">Add what is already in your kitchen.</p><input class="input" id="ing" placeholder="e.g. rice, eggs, tomatoes"><button class="btn primary wide" onclick="add()">＋ Add to stock</button><div id="stocks"></div></section>
-<section id="meals" class="card hidden"><div class="mealhero"><span class="tag" style="background:#fff;color:#a90018">🇳🇬 Nigerian food</span><h2 style="margin:10px 0 4px;color:#fff">Meals you’ll actually want to make.</h2><p style="margin:0">Breakfast, lunch, dinner, quick plates, budget meals and weekend treats — with visuals that match the meal.</p></div><div class="mealfilters"><button class="btn active" onclick="filterMeals('All',this)">All</button><button class="btn" onclick="filterMeals('Breakfast',this)">Breakfast</button><button class="btn" onclick="filterMeals('Lunch',this)">Lunch</button><button class="btn" onclick="filterMeals('Dinner',this)">Dinner</button><button class="btn" onclick="filterMeals('Budget',this)">Budget</button><button class="btn" onclick="filterMeals('Quick',this)">Quick</button><button class="btn" onclick="filterMeals('Treat',this)">Treat</button></div><div class="card" style="background:#fff8e8;margin-bottom:10px"><b>🍽️ Practical meal-time table</b><div class="time-grid" style="margin-top:10px"><div class="time-card"><b>BREAKFAST</b><strong>Pap & Akara</strong><span class="muted">7–10am · ₦ Easy</span></div><div class="time-card"><b>LUNCH</b><strong>Rice & Stew</strong><span class="muted">12–3pm · ₦₦ Mid</span></div><div class="time-card"><b>DINNER</b><strong>Yam & Egg</strong><span class="muted">6–9pm · ₦ Easy</span></div></div></div><div class="grid" id="mealGrid"></div></section>
+<section id="meals" class="card hidden"><div class="meal-screen">
+<div class="meal-screen-top"><div><span class="meal-screen-kicker">FeedMe · Meal Ideas</span><h2>What are you in the mood for?</h2><p class="meal-screen-intro">Real Nigerian meals for real days — from a quick breakfast before work to a filling family dinner or a weekend treat.</p></div><span class="tag">🇳🇬 Local favourites</span></div>
+<div class="meal-search"><input id="mealSearch" placeholder="Search meals, e.g. jollof, yam, suya" oninput="renderMeals()"><button class="btn primary" onclick="surpriseMeal()">Surprise me ✨</button></div>
+<div class="mealfilters"><button class="btn active" onclick="filterMeals('All',this)">All</button><button class="btn" onclick="filterMeals('Breakfast',this)">Breakfast</button><button class="btn" onclick="filterMeals('Lunch',this)">Lunch</button><button class="btn" onclick="filterMeals('Dinner',this)">Dinner</button><button class="btn" onclick="filterMeals('Budget',this)">Budget</button><button class="btn" onclick="filterMeals('Quick',this)">Under 30 min</button><button class="btn" onclick="filterMeals('Treat',this)">Weekend treats</button></div>
+<div class="meal-feature"><div class="meal-feature-img"><img src="assets/jollof.jpg" alt="Jollof Rice and Chicken"><span class="feature-badge">🔥 TODAY'S PICK</span></div><div class="meal-feature-copy"><span class="rating">★★★★★ 4.9 · crowd favourite</span><h3>Jollof Rice & Chicken</h3><p>A familiar Nigerian favourite when you want something satisfying, colourful and easy to share.</p><div class="feature-meta"><span class="feature-chip">⏱ <strong>30–40 min</strong></span><span class="feature-chip">₦ <strong>Mid budget</strong></span><span class="feature-chip">🍽️ <strong>Lunch</strong></span></div><button class="btn primary" onclick="recipe(0)">View meal →</button></div></div>
+<div class="time-panel"><div class="time-panel-head"><b>🍽️ Your practical meal-time table</b><span>Plan your day without overthinking it</span></div><div class="time-grid"><div class="time-card"><b>BREAKFAST · 7–10AM</b><strong>Pap & Akara</strong><span class="muted">Quick, filling and familiar</span><div class="time-budget">₦ Easy</div></div><div class="time-card"><b>LUNCH · 12–3PM</b><strong>Jollof & Chicken</strong><span class="muted">A proper midday favourite</span><div class="time-budget">₦₦ Mid</div></div><div class="time-card"><b>DINNER · 6–9PM</b><strong>Amala & Ewedu</strong><span class="muted">Comfort food for the evening</span><div class="time-budget">₦₦ Mid</div></div></div></div>
+<div class="meal-section-head"><h3>Browse by craving</h3><span>Tap a category</span></div><div class="meal-categories"><div class="meal-cat"><img src="assets/cat-rice.jpg"><b>Rice dishes</b></div><div class="meal-cat"><img src="assets/cat-soup.jpg"><b>Soups & swallow</b></div><div class="meal-cat"><img src="assets/cat-healthy.jpg"><b>Healthy plates</b></div><div class="meal-cat"><img src="assets/cat-chops.jpg"><b>Small chops</b></div></div>
+<div class="meal-section-head"><h3>Meal ideas for you</h3><span id="mealCount">20 ideas</span></div><div class="grid" id="mealGrid"></div></div></section>
 <section id="history" class="card hidden"><h2>Cooking History</h2><div id="hist" class="muted">No meals cooked yet.</div></section>
 </section></div>
 <div id="modal" class="modal" onclick="if(event.target.id==='modal')closeSignIn()"><div class="sheet"><button class="btn sheet-close" onclick="closeSignIn()">×</button><span class="eyebrow">Welcome back</span><h2 style="margin-top:12px">Sign in to your kitchen</h2><p class="muted">Enter your email to continue. This MVP keeps your session on this device.</p><input class="input" id="email" type="email" placeholder="you@example.com"><button class="btn primary wide" onclick="signIn()">Continue to FeedMe</button></div></div>
 <div id="toast" class="toast"></div>
 <script>
 const IMG={
-Jollof:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_jollof_rice.jpg',
-Egusi:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Original_Nigerian_Egusi_soup_and_yellow_garri_(Eba).jpg',
-Yam:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Pounded_Yam_and_Egusi_Soup.jpg',
-Suya:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Suya.jpg',
-Moi:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Images_of_a_local_dish_in_Nigeria_called_Moi-Moi.jpg',
-Puff:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Puff-Puff.jpg'
+Jollof:'assets/jollof.jpg',
+Egusi:'assets/egusi.jpg',
+Yam:'assets/egusi.jpg',
+Suya:'assets/suya.jpg',
+Moi:'assets/amala.jpg',
+Puff:'assets/amala.jpg'
 };
 const M=[
-['Jollof Rice','rice,tomatoes,onion,oil','Rice','45 min','Lunch','Mid',IMG.Jollof],['Fried Rice','rice,vegetables,egg,oil','Rice','35 min','Lunch','Mid','https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85'],['Ofada Rice & Sauce','ofada rice,pepper,onion','Rice','50 min','Lunch','Mid','https://commons.wikimedia.org/wiki/Special:Redirect/file/Ofada_rice_and_sauce.jpg'],
-['Beans & Fried Plantain','beans,plantain,onion,oil','Beans','50 min','Lunch','Easy','https://commons.wikimedia.org/wiki/Special:Redirect/file/Beans_and_plantain.jpg'],['Beans Porridge','beans,palm oil,onion','Beans','55 min','Dinner','Easy','https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_beans_porridge.jpg'],['Moi Moi','beans,pepper,onion,oil','Breakfast','60 min','Breakfast','Easy',IMG.Moi],
-['Yam & Egg Sauce','yam,eggs,tomatoes,onion','Yam','30 min','Dinner','Easy',IMG.Yam],['Yam Porridge','yam,palm oil,pepper,onion','Yam','45 min','Dinner','Easy',IMG.Yam],['Yam & Yamarita','yam,eggs,flour,oil','Yam','35 min','Dinner','Mid',IMG.Yam],
-['Egusi Soup & Eba','egusi,leafy vegetables,palm oil,protein,garri','Soup','55 min','Dinner','Mid',IMG.Egusi],['Okro Soup & Eba','okro,palm oil,pepper,protein,garri','Soup','40 min','Dinner','Mid',IMG.Egusi],['Pounded Yam & Egusi','yam,egusi,leafy vegetables,protein','Soup','60 min','Lunch','Mid',IMG.Yam],
-['Jollof Spaghetti','spaghetti,tomatoes,pepper,onion','Quick','30 min','Lunch','Easy',IMG.Jollof],['Noodles & Egg','noodles,vegetables,egg','Quick','15 min','Breakfast','Easy','https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85'],['Egg & Tomato Toast','bread,eggs,tomatoes,onion','Breakfast','15 min','Breakfast','Easy',IMG.Moi],['Pap & Akara','pap,beans,onion,oil','Breakfast','30 min','Breakfast','Easy',IMG.Puff],
-['Suya & Onions','beef,suya spice,onion','Protein','25 min','Treat','Mid',IMG.Suya],['Pepper Soup','protein,pepper,onion,spices','Protein','45 min','Dinner','Mid',IMG.Suya],['Puff Puff','flour,yeast,sugar,oil','Treat','35 min','Treat','Easy','https://commons.wikimedia.org/wiki/Special:Redirect/file/Puff-Puff.jpg'],['Fish & Plantain','fish,plantain,pepper,onion','Protein','35 min','Dinner','Mid',IMG.Suya]
-];
+['Jollof Rice & Chicken','rice,tomatoes,onion,oil,chicken','Rice','35 min','Lunch','Mid',IMG.Jollof],
+['Jollof Rice','rice,tomatoes,onion,oil','Rice','30 min','Lunch','Easy',IMG.Jollof],
+['Amala & Ewedu','amala,ewedu,stew,protein','Swallow','30 min','Dinner','Mid',IMG.Moi],
+['Egusi Soup & Pounded Yam','egusi,leafy vegetables,palm oil,protein,yam','Soup','45 min','Lunch','Mid',IMG.Egusi],
+['Pounded Yam & Egusi','yam,egusi,leafy vegetables,protein','Soup','50 min','Dinner','Mid',IMG.Egusi],
+['Suya Platter','beef,suya spice,onion','Protein','25 min','Treat','Mid',IMG.Suya],
+['Suya & Onions','beef,suya spice,onion','Protein','20 min','Dinner','Mid',IMG.Suya],
+['Jollof Rice — Quick Plate','rice,tomatoes,pepper,onion','Rice','25 min','Dinner','Easy',IMG.Jollof],
+['Amala & Ewedu — Family Plate','amala,ewedu,stew,protein','Swallow','35 min','Lunch','Mid',IMG.Moi],
+['Puff Puff','flour,yeast,sugar,oil','Breakfast','25 min','Breakfast','Easy','assets/cat-dessert.jpg'],
+['Small Chops Platter','samosa,spring roll,puff puff','Small Chops','20 min','Treat','Mid','assets/cat-chops.jpg'],
+['Fresh Fruit Bowl','banana,watermelon,pineapple','Healthy','10 min','Breakfast','Easy','assets/cat-healthy.jpg']
+]
 let S=JSON.parse(localStorage.getItem('feedme_stock')||'[]'),H=JSON.parse(localStorage.getItem('feedme_history')||'[]'),mode='',mealFilter='All';
 const save=()=>{localStorage.setItem('feedme_stock',JSON.stringify(S));localStorage.setItem('feedme_history',JSON.stringify(H));};
 function openSignIn(){modal.classList.add('open')}function closeSignIn(){modal.classList.remove('open')}function signIn(){if(!email.value.trim())return;localStorage.setItem('feedme_user',email.value.trim());closeSignIn();enterApp()}function enterApp(){landing.style.display='none';app.style.display='block';renderMeals();renderStock();suggest();scrollTo(0,0)}function back(){app.style.display='none';landing.style.display='block';scrollTo(0,0)}
@@ -226,7 +288,8 @@ function tab(id,b){document.querySelectorAll('#app section.card').forEach(x=>x.c
 function add(){let x=ing.value.trim().toLowerCase();if(!x)return;if(!S.includes(x))S.push(x);ing.value='';save();renderStock();suggest()}
 function renderStock(){stocks.innerHTML=S.length?S.map((x,i)=>`<div class="stock"><span>🥕 ${x}</span><button class="btn" onclick="S.splice(${i},1);save();renderStock();suggest()">Remove</button></div>`).join(''):'<p class="muted">Your stock is empty. Add a few ingredients and let FeedMe work with them.</p>'}
 function filterMeals(f,b){mealFilter=f;document.querySelectorAll('.mealfilters .btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderMeals()}
-function renderMeals(){let arr=M.filter(m=>{if(mealFilter==='All')return true;if(mealFilter==='Budget')return m[5]==='Easy';if(mealFilter==='Quick')return parseInt(m[3])<=30;if(mealFilter==='Treat')return m[4]==='Treat';if(mealFilter==='Breakfast')return m[4]==='Breakfast';if(mealFilter==='Lunch')return m[4]==='Lunch';if(mealFilter==='Dinner')return m[4]==='Dinner';return true});mealGrid.innerHTML=arr.map(m=>`<article class="meal"><div class="meal-img"><img src="${m[6]}" alt="${m[0]}" loading="lazy"></div><div class="meal-body"><span class="tag">${m[4]}</span><h3>${m[0]}</h3><div class="meal-meta"><span class="pricebar">₦ ${m[5]}</span><span class="tag">⏱ ${m[3]}</span></div><p>${m[1].split(',').join(' · ')}</p><button class="btn primary wide" onclick="recipe(${M.indexOf(m)})">View meal</button></div></article>`).join('')}
+function renderMeals(){let q=(document.getElementById('mealSearch')?.value||'').trim().toLowerCase();let arr=M.filter(m=>{let matchesFilter=mealFilter==='All'||mealFilter==='Budget'&&m[5]==='Easy'||mealFilter==='Quick'&&parseInt(m[3])<=30||mealFilter==='Treat'&&m[4]==='Treat'||mealFilter==='Breakfast'&&m[4]==='Breakfast'||mealFilter==='Lunch'&&m[4]==='Lunch'||mealFilter==='Dinner'&&m[4]==='Dinner';let matchesSearch=!q||m[0].toLowerCase().includes(q)||m[1].toLowerCase().includes(q)||m[2].toLowerCase().includes(q);return matchesFilter&&matchesSearch});if(document.getElementById('mealCount'))mealCount.textContent=arr.length+' '+(arr.length===1?'idea':'ideas');mealGrid.innerHTML=arr.length?arr.map(m=>`<article class="meal"><div class="meal-img"><img src="${m[6]}" alt="${m[0]}" loading="lazy"><button class="meal-fav" onclick="showToast('Saved ${m[0]} to favourites')">♡</button></div><div class="meal-body"><div class="meal-body-top"><span class="tag">${m[4]}</span><span class="rating">★ 4.${5-(M.indexOf(m)%4)}</span></div><h3>${m[0]}</h3><p>${m[1].split(',').join(' · ')}</p><div class="meal-meta"><span class="pricebar">₦ ${m[5]}</span><span class="tag">⏱ ${m[3]}</span></div><button class="btn primary wide" onclick="recipe(${M.indexOf(m)})">View meal</button></div></article>`).join(''):'<div class="meal-empty">No meals match that search yet. Try “rice”, “yam”, “soup” or “suya”.</div>'}
+function surpriseMeal(){let i=Math.floor(Math.random()*M.length);recipe(i);showToast('Here is a meal idea for you ✨')}
 function setMode(x){mode=x;modeNote.classList.remove('hidden');modeNote.textContent=x==='store'?'No shopping: prioritising meals you can make from your current stock.':x==='quick'?'30 mins: prioritising meals you can make quickly.':'Everyday budget: prioritising simpler, lower-cost meal ideas.';suggest()}
 function suggest(){let candidates=M.map((m,i)=>{let ing=m[1].split(',');let score=ing.filter(x=>S.some(z=>z.includes(x)||x.includes(z))).length;return{m,i,score,missing:ing.length-score}}).sort((a,b)=>b.score-a.score);if(mode==='quick')candidates=candidates.filter(x=>parseInt(x.m[3])<=30);if(mode==='budget')candidates=candidates.filter(x=>x.m[5]==='Easy');if(mode==='store')candidates=candidates.filter(x=>x.m[1].split(',').every(x=>S.some(z=>z.includes(x)||x.includes(z))));let x=candidates[0]||{m:M[0],i:0,score:0,missing:0};rec.innerHTML=`<div class="card"><div class="meal-img" style="height:210px;border-radius:16px;overflow:hidden"><img src="${x.m[6]}" alt="${x.m[0]}" style="width:100%;height:100%;object-fit:cover"></div><span class="tag" style="margin-top:12px">Recommended</span><h2>${x.m[0]}</h2><p class="muted">${x.score?`Matches ${x.score} ingredient${x.score>1?'s':''} in your stock.`:'A practical Nigerian meal idea to try today.'}</p><p><b>Ingredients:</b> ${x.m[1].split(',').join(', ')}</p>${x.missing?`<p class="muted">You may need ${x.missing} more ingredient${x.missing>1?'s':''}.</p>`:''}<button class="btn primary wide" onclick="recipe(${x.i})">View meal</button><button class="btn wide" onclick="suggest()">Suggest another</button></div>`}
 function recipe(i){let m=M[i];rec.innerHTML=`<div class="card"><div class="meal-img" style="height:220px;border-radius:16px;overflow:hidden"><img src="${m[6]}" alt="${m[0]}" style="width:100%;height:100%;object-fit:cover"></div><span class="tag" style="margin-top:12px">${m[4]}</span><h2>${m[0]}</h2><p><b>Ingredients:</b> ${m[1].split(',').join(', ')}</p><p><b>Time:</b> ${m[3]} · <b>Budget:</b> ₦ ${m[5]}</p><p class="muted"><b>Simple method:</b> Prep the ingredients, cook the base, add the main ingredients, season to taste and serve hot. This MVP keeps the recipe guidance intentionally simple.</p><button class="btn primary wide" onclick="cook(${i})">✓ Mark as cooked</button></div>`}
@@ -235,11 +298,11 @@ function rate(n){rated.textContent=`Thanks for your ${n}/5 rating. FeedMe can us
 renderMeals();renderStock();
 </script><script>
 const FEEDME_MEAL_IMAGES={
-"Jollof Rice":"https://images.unsplash.com/photo-1604329760661-e71dc83c7f8a?auto=format&fit=crop&w=900&q=85",
-"Jollof Rice & Chicken":"https://images.unsplash.com/photo-1604329760661-e71dc83c7f8a?auto=format&fit=crop&w=900&q=85",
-"Fried Rice & Chicken":"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85",
+"Jollof Rice":"assets/suya.jpg",
+"Jollof Rice & Chicken":"assets/suya.jpg",
+"Fried Rice & Chicken":"assets/jollof.jpg",
 "Suya":"https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=85",
-"Noodles & Egg":"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85"};
+"Noodles & Egg":"assets/amala.jpg"};
 function feedMeImageFor(n){n=(n||'').trim();return FEEDME_MEAL_IMAGES[n]||null}
 function applyFeedMeMealImages(root=document){root.querySelectorAll('[data-meal-name]').forEach(c=>{let n=c.dataset.mealName,u=feedMeImageFor(n),i=c.querySelector('img');if(u&&i){i.src=u;i.alt=n+' — Nigerian meal';i.loading='lazy'}})}
 document.addEventListener('DOMContentLoaded',()=>applyFeedMeMealImages());
