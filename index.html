@@ -6,44 +6,198 @@
 <meta name="theme-color" content="#a90018">
 <title>FeedMe — Nigerian meals, made practical</title>
 <style>
-:root{--red:#a90018;--red2:#d51d35;--wine:#650010;--ink:#191616;--muted:#706765;--cream:#fff9f5;--paper:#fff;--line:#eaded8;--soft:#fff0ed;--gold:#f2b43a;--green:#55742b;--shadow:0 18px 50px rgba(61,24,18,.10)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{max-width:720px;margin:auto}.landing{min-height:100vh;overflow:hidden}.nav{display:flex;align-items:center;justify-content:space-between;padding:18px 18px;position:relative;z-index:4}.brand{display:flex;align-items:center;gap:9px;font-weight:950;font-size:21px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,var(--red2),var(--red));display:grid;place-items:center;color:white;box-shadow:0 8px 18px #a9001830}.btn{border:1px solid var(--line);background:#fff;border-radius:14px;padding:11px 14px;font-weight:850;color:var(--ink);cursor:pointer}.primary{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 10px 22px #a9001830}.ghost{background:transparent}.hero{padding:28px 18px 24px;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 10px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:950;color:var(--red)}h1{font-size:clamp(42px,11vw,68px);line-height:.96;letter-spacing:-.06em;margin:16px 0 16px;max-width:650px}h1 span{color:var(--red)}h2{letter-spacing:-.035em;font-size:28px;margin:0 0 9px}h3{letter-spacing:-.02em}p{line-height:1.58;color:var(--muted)}.hero p{font-size:16px;max-width:610px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.pills{display:flex;gap:7px;flex-wrap:wrap}.pill,.tag{display:inline-flex;align-items:center;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}.pill{background:#fff;border:1px solid var(--line)}.tag{background:var(--soft);color:var(--red)}
-.hero-collage{padding:0 18px 30px;display:grid;grid-template-columns:1.3fr .7fr;grid-template-rows:155px 155px;gap:10px}.photo{position:relative;overflow:hidden;border-radius:24px;background:#ddd;box-shadow:var(--shadow);min-height:100px}.photo img{width:100%;height:100%;object-fit:cover;display:block}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.62));pointer-events:none}.photo-copy{position:absolute;z-index:2;left:14px;right:14px;bottom:13px;color:#fff}.photo-copy b{display:block;font-size:18px}.photo-copy small{opacity:.88}.photo.big{grid-row:1/3}.section{padding:34px 18px}.section-head{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:15px}.section-head p{margin:0;max-width:430px;font-size:13px}.meal-strip{display:flex;gap:10px;overflow:auto;padding:3px 1px 12px;scrollbar-width:none}.meal-strip::-webkit-scrollbar{display:none}.mini-food{min-width:145px;height:170px;border-radius:20px;overflow:hidden;position:relative;background:#ddd;flex:0 0 145px}.mini-food img{width:100%;height:100%;object-fit:cover}.mini-food:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.75))}.mini-food div{position:absolute;z-index:2;bottom:11px;left:11px;color:#fff}.mini-food b{display:block}.mini-food small{opacity:.85}
-.plan{background:#191616;color:#fff;border-radius:26px;padding:20px;margin-top:8px;box-shadow:var(--shadow)}.plan p{color:#d7cecb;margin:5px 0 16px}.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.plan-card{background:#2b2726;border:1px solid #403a38;border-radius:17px;padding:12px}.plan-card .time{font-size:10px;color:#f0b2b8;font-weight:950;letter-spacing:.08em}.plan-card b{display:block;margin:5px 0;font-size:14px}.plan-card span{font-size:11px;color:#c9c0bd}.budget{margin-top:8px;color:#f6c765;font-weight:900;font-size:11px}
-.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.value{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px}.value-icon{font-size:24px}.value b{display:block;margin:8px 0 5px}.value p{font-size:12px;margin:0}.audience{background:linear-gradient(135deg,#fff1ee,#fff);border:1px solid var(--line);border-radius:24px;padding:20px}.audience-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.audience-row span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:11px;font-weight:850}.download{background:var(--red);color:#fff;border-radius:25px;padding:22px;box-shadow:0 18px 40px #a9001828}.download p{color:#ffe2e4}.store-row{display:flex;gap:8px;flex-wrap:wrap}.store{background:#fff;color:#191616;border-radius:13px;padding:10px 12px;font-weight:900;display:flex;gap:8px;align-items:center;border:0}.store small{display:block;font-size:9px;font-weight:700;color:#706765;text-align:left}.store strong{display:block;font-size:14px}.footer{padding:20px 18px 40px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
-.app{display:none;min-height:100vh;background:#f7f3f0;padding:0 15px 80px}.appbar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:12px 0}.row{display:flex;align-items:center;justify-content:space-between;gap:8px}.tabs{display:flex;gap:7px;overflow:auto;padding:12px 0}.tabs button{white-space:nowrap}.tabs .active{background:var(--red);color:#fff;border-color:var(--red)}.card{background:#fff;border:1px solid var(--line);border-radius:21px;padding:16px;box-shadow:0 8px 30px rgba(60,30,20,.04)}.hidden{display:none!important}.wide{width:100%;margin-top:10px}.input{width:100%;padding:13px;border:1px solid var(--line);border-radius:13px;background:#fff;margin:7px 0}.stock{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f0e8e4;gap:8px}.mealhero{position:relative;overflow:hidden;background:linear-gradient(135deg,#7c0010,#c81830);color:#fff;border-radius:24px;padding:20px;min-height:185px}.mealhero:after{content:"🍚";position:absolute;right:15px;bottom:-15px;font-size:105px;opacity:.12}.mealhero p{color:#ffe6e6}.mealfilters{display:flex;gap:7px;overflow:auto;padding:12px 0}.mealfilters button{white-space:nowrap}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.meal{overflow:hidden;padding:0;background:#fff;border:1px solid var(--line);border-radius:19px}.meal-img{height:145px;position:relative;background:#eee}.meal-img img{width:100%;height:100%;object-fit:cover}.meal-body{padding:13px}.meal h3{font-size:16px;margin:8px 0 5px}.meal p{font-size:11px;margin:0}.meal-meta{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0}.pricebar{font-size:10px;font-weight:950;color:#7d5a00;background:#fff3d5;border-radius:999px;padding:6px 8px}.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.time-card{background:#fffaf4;border:1px solid var(--line);border-radius:16px;padding:12px}.time-card b{display:block;color:var(--red);font-size:10px}.time-card strong{display:block;margin:5px 0;font-size:13px}.muted{color:var(--muted);font-size:12px}.notice{padding:12px;border-radius:13px;background:#fff0f0;color:var(--wine);font-size:12px;margin-top:10px}.modal{display:none;position:fixed;inset:0;background:#0009;align-items:flex-end;z-index:20}.modal.open{display:flex}.sheet{background:#fff;width:100%;max-width:720px;margin:auto;border-radius:26px 26px 0 0;padding:22px 18px 30px}.sheet-close{float:right}.download-note{font-size:11px;color:#ffe7e8;margin-top:10px}.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:#191616;color:#fff;padding:11px 14px;border-radius:999px;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:480px){.hero-collage{grid-template-columns:1fr 1fr;grid-template-rows:145px 145px}.photo.big{grid-row:1/3}.plan-grid,.time-grid{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.meal-img{height:125px}}
+:root{
+  --bg:#050505;--surface:#111111;--surface2:#171717;--surface3:#202020;
+  --red:#ff3045;--red2:#ff5363;--green:#29d66f;--gold:#ffc857;
+  --text:#f7f7f7;--muted:#a8a8a8;--line:#292929;--white:#fff;
+  --shadow:0 24px 70px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input{font:inherit}
+button{cursor:pointer}
+.wrap{max-width:1180px;margin:auto}
+.landing{min-height:100vh;overflow:hidden;background:
+ radial-gradient(circle at 82% 18%,rgba(255,48,69,.14),transparent 28%),
+ radial-gradient(circle at 8% 35%,rgba(41,214,111,.08),transparent 25%),#050505}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;position:relative;z-index:8}
+.brand{display:flex;align-items:center;gap:10px;font-weight:950;font-size:22px;letter-spacing:-.04em}
+.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,var(--red2),var(--red));display:grid;place-items:center;color:white;box-shadow:0 10px 28px rgba(255,48,69,.24)}
+.btn{border:1px solid var(--line);background:var(--surface2);color:var(--text);border-radius:14px;padding:11px 15px;font-weight:850;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-1px);border-color:#3d3d3d}
+.primary{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 12px 28px rgba(255,48,69,.24)}
+.ghost{background:transparent}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;padding:62px 24px 30px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:8px 11px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:950;color:#fff}
+.hero h1{font-size:clamp(48px,7vw,86px);line-height:.94;letter-spacing:-.07em;margin:18px 0 18px;max-width:650px}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:17px;line-height:1.6;color:var(--muted);max-width:600px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill,.tag{display:inline-flex;align-items:center;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}
+.pill{background:#101010;border:1px solid var(--line);color:#ddd}
+.tag{background:rgba(255,48,69,.12);color:#ff7684;border:1px solid rgba(255,48,69,.18)}
+.hero-visual{position:relative;min-height:520px;border-radius:34px;overflow:visible}
+.hero-food{position:absolute;inset:0;border-radius:34px;overflow:hidden;background:#181818;box-shadow:var(--shadow)}
+.hero-food img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08) contrast(1.04)}
+.hero-food:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.08) 45%,rgba(0,0,0,.38)),linear-gradient(0deg,rgba(0,0,0,.35),transparent 55%);pointer-events:none}
+.glass{position:absolute;background:rgba(17,17,17,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 18px 50px rgba(0,0,0,.35);border-radius:20px;padding:15px}
+.track{right:-18px;top:48px;width:210px}
+.offer{right:-18px;bottom:74px;width:210px}
+.glass .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);margin-right:6px}
+.glass strong{font-size:16px}
+.glass small{display:block;color:#aaa;margin-top:5px}
+.progress{height:5px;border-radius:999px;background:#2c2c2c;margin-top:12px;overflow:hidden}.progress i{display:block;width:70%;height:100%;background:var(--red);border-radius:inherit}
+.location-bar{position:absolute;left:26px;right:26px;bottom:28px;z-index:3;background:rgba(17,17,17,.84);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);border-radius:18px;padding:10px;display:flex;align-items:center;gap:10px}
+.location-bar .loc-copy{flex:1;min-width:0}.location-bar small{display:block;color:#999;font-size:10px}.location-bar strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero-collage{display:none}
+.section{padding:56px 24px}
+.section-head{display:flex;justify-content:space-between;gap:18px;align-items:end;margin-bottom:20px}
+.section-head p{margin:0;max-width:470px;font-size:13px;color:var(--muted)}
+.section h2{letter-spacing:-.05em;font-size:34px;margin:0 0 8px}
+.meal-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:3px 0 12px}
+.mini-food{height:220px;border-radius:22px;overflow:hidden;position:relative;background:#191919}
+.mini-food img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}.mini-food:hover img{transform:scale(1.04)}
+.mini-food:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.88))}
+.mini-food div{position:absolute;z-index:2;bottom:14px;left:14px;color:#fff}.mini-food b{display:block;font-size:17px}.mini-food small{display:block;color:#ccc;margin-top:4px}
+.plan{background:linear-gradient(135deg,#171717,#0d0d0d);color:#fff;border:1px solid #292929;border-radius:28px;padding:24px;box-shadow:var(--shadow)}
+.plan p{color:#aaa;margin:5px 0 18px}.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.plan-card{background:#121212;border:1px solid #292929;border-radius:18px;padding:15px}.plan-card .time{font-size:10px;color:#ff7380;font-weight:950;letter-spacing:.08em}.plan-card b{display:block;margin:7px 0;font-size:15px}.plan-card span{font-size:11px;color:#aaa}.budget{margin-top:9px;color:var(--gold);font-weight:900;font-size:11px}
+.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.value{background:#101010;border:1px solid var(--line);border-radius:20px;padding:18px}.value-icon{font-size:24px}.value b{display:block;margin:9px 0 5px}.value p{font-size:12px;margin:0;color:#999}
+.audience{background:linear-gradient(135deg,rgba(255,48,69,.12),rgba(41,214,111,.06));border:1px solid #2c2c2c;border-radius:26px;padding:22px}.audience p{color:#aaa;margin-top:0}.audience-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.audience-row span{background:#111;border:1px solid #2b2b2b;border-radius:999px;padding:9px 12px;font-size:11px;font-weight:850}
+.download{background:linear-gradient(135deg,#ff3045,#a90f20);color:#fff;border-radius:26px;padding:26px;box-shadow:0 20px 55px rgba(255,48,69,.2)}.download p{color:#ffe5e8}.store-row{display:flex;gap:9px;flex-wrap:wrap}.store{background:#fff;color:#111;border-radius:13px;padding:10px 12px;font-weight:900;display:flex;gap:8px;align-items:center;border:0}.store small{display:block;font-size:9px;font-weight:700;color:#666;text-align:left}.store strong{display:block;font-size:14px}.download-note{font-size:11px;color:#ffe7e8;margin-top:10px}
+.footer{padding:22px 24px 42px;border-top:1px solid #222;font-size:11px;color:#777}
+
+.app{display:none;min-height:100vh;background:#050505;padding:0 16px 80px;color:#f7f7f7}
+.appbar{position:sticky;top:0;z-index:5;background:rgba(5,5,5,.86);backdrop-filter:blur(18px);border-bottom:1px solid #222;padding:12px 0}
+.app .card{background:#101010;border:1px solid #292929;color:#f7f7f7;border-radius:22px;padding:17px;box-shadow:none}
+.app .muted{color:#999}.app .input{width:100%;padding:13px;border:1px solid #303030;border-radius:13px;background:#171717;color:#fff;margin:7px 0}.app .stock{border-bottom:1px solid #292929}
+.app .tabs{display:flex;gap:7px;overflow:auto;padding:12px 0}.app .tabs button{white-space:nowrap;background:#121212;color:#bbb;border-color:#292929}.app .tabs .active{background:var(--red);color:#fff;border-color:var(--red)}
+.mealhero{position:relative;overflow:hidden;background:linear-gradient(135deg,#7c0010,#d51d35);color:#fff;border-radius:24px;padding:22px;min-height:210px}
+.mealhero:after{content:"🍲";position:absolute;right:12px;bottom:-20px;font-size:130px;opacity:.13}
+.mealfilters{display:flex;gap:7px;overflow:auto;padding:12px 0}.mealfilters button{white-space:nowrap}
+.app .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.app .meal{overflow:hidden;padding:0;background:#101010;border:1px solid #292929;border-radius:20px}
+.app .meal-img{height:160px;position:relative;background:#181818}.app .meal-img img{width:100%;height:100%;object-fit:cover;display:block}.app .meal-body{padding:14px}
+.app .meal h3{font-size:16px;margin:8px 0 5px}.app .meal p{font-size:11px;margin:0;color:#999}.app .meal-meta{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.pricebar{font-size:10px;font-weight:950;color:#ffd56e;background:rgba(255,200,87,.12);border:1px solid rgba(255,200,87,.15);border-radius:999px;padding:6px 8px}
+.time-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.time-card{background:#151515;border:1px solid #292929;border-radius:16px;padding:12px}.time-card b{display:block;color:#ff6c79;font-size:10px}.time-card strong{display:block;margin:5px 0;font-size:13px}.time-card .muted{color:#999}
+.notice{padding:12px;border-radius:13px;background:rgba(255,48,69,.1);color:#ffadb5;border:1px solid rgba(255,48,69,.15);font-size:12px;margin-top:10px}
+.modal{display:none;position:fixed;inset:0;background:#000b;align-items:flex-end;z-index:20}.modal.open{display:flex}.sheet{background:#111;width:100%;max-width:720px;margin:auto;border-radius:26px 26px 0 0;padding:22px 18px 30px;border:1px solid #2b2b2b}.sheet-close{float:right}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:#fff;color:#111;padding:11px 14px;border-radius:999px;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.25s;z-index:30}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;gap:24px;padding-top:35px}.hero-visual{min-height:440px}.track,.offer{right:10px}.meal-strip{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .nav{padding:17px 16px}.hero,.section{padding-left:16px;padding-right:16px}.hero h1{font-size:52px}.hero-visual{min-height:390px}.glass{padding:12px}.track{top:18px;width:178px}.offer{bottom:65px;width:178px}.location-bar{left:12px;right:12px;bottom:12px}.location-bar .btn{padding:10px 12px}.meal-strip{grid-template-columns:1fr 1fr;gap:10px}.mini-food{height:180px}.plan-grid,.time-grid{grid-template-columns:1fr}.value-grid{grid-template-columns:1fr}.app .grid{grid-template-columns:1fr 1fr}.app .meal-img{height:135px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 <section id="landing" class="landing">
-<nav class="nav"><div class="brand"><span class="logo">🍲</span>FeedMe</div><button class="btn" onclick="openSignIn()">Sign in</button></nav>
-<div class="hero"><span class="eyebrow">🇳🇬 Made for Nigerian kitchens</span><h1>What can you cook <span>today?</span></h1><p>From <b>yam to yamarita</b>, FeedMe turns the food you already have into practical Nigerian meal ideas — for busy mornings, family lunches, simple dinners and everything in between.</p><div class="actions"><button class="btn primary" onclick="enterApp()">Start cooking →</button><button class="btn" onclick="document.getElementById('ideas').scrollIntoView({behavior:'smooth'})">Explore meals</button></div><div class="pills"><span class="pill">🍚 Everyday meals</span><span class="pill">₦ Budget-aware</span><span class="pill">⚡ Quick options</span><span class="pill">🛒 Use what you have</span></div></div>
-<div class="hero-collage">
-<div class="photo big"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_jollof_rice.jpg" alt="Nigerian jollof rice"><div class="photo-copy"><b>Jollof that looks like home</b><small>Rice · chicken · plantain</small></div></div>
-<div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Original_Nigerian_Egusi_soup_and_yellow_garri_(Eba).jpg" alt="Egusi soup and eba"><div class="photo-copy"><b>Egusi & Eba</b><small>Rich, filling, familiar</small></div></div>
-<div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Suya.jpg" alt="Nigerian suya"><div class="photo-copy"><b>Suya nights</b><small>Quick treat</small></div></div>
+<nav class="nav">
+  <div class="brand"><span class="logo">🍲</span>FeedMe</div>
+  <button class="btn" onclick="openSignIn()">Sign in</button>
+</nav>
+
+<div class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">🇳🇬 Built for Nigerian kitchens</span>
+    <h1>Got food? Let’s make <span>something.</span></h1>
+    <p>From what’s in your kitchen to what’s on your plate. Find practical Nigerian meals that fit your ingredients, your time and your budget.</p>
+    <div class="actions">
+      <button class="btn primary" onclick="enterApp()">Start cooking →</button>
+      <button class="btn" onclick="document.getElementById('ideas').scrollIntoView({behavior:'smooth'})">Explore meals</button>
+    </div>
+    <div class="pills">
+      <span class="pill">🍚 Everyday meals</span><span class="pill">₦ Budget-aware</span>
+      <span class="pill">⚡ Quick options</span><span class="pill">🛒 Use what you have</span>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-food">
+      <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_jollof_rice.jpg" alt="Nigerian jollof rice with chicken and plantain">
+    </div>
+    <div class="glass track">
+      <strong><span class="dot"></span>Kitchen match</strong>
+      <small>Rice + tomatoes + chicken</small>
+      <div class="progress"><i></i></div>
+      <small>3 ingredients matched</small>
+    </div>
+    <div class="glass offer">
+      <span class="tag">TODAY’S PICK</span>
+      <strong style="display:block;margin-top:8px">Jollof & Chicken</strong>
+      <small>Family favourite · 35–45 min</small>
+    </div>
+    <div class="location-bar">
+      <div class="loc-copy"><small>Your kitchen</small><strong>What ingredients do you have?</strong></div>
+      <button class="btn primary" onclick="enterApp()">Find meals</button>
+    </div>
+  </div>
 </div>
-<section id="ideas" class="section"><div class="section-head"><div><span class="eyebrow">Meal ideas</span><h2>Real food for real days.</h2></div><p>Not just party food. FeedMe makes room for the everyday meals Nigerians actually cook.</p></div><div class="meal-strip">
-<div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Images_of_a_local_dish_in_Nigeria_called_Moi-Moi.jpg" alt="Moi moi"><div><b>Moi Moi</b><small>Breakfast / light lunch</small></div></div>
-<div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pounded_Yam_and_Egusi_Soup.jpg" alt="Pounded yam and egusi soup"><div><b>Pounded Yam & Egusi</b><small>Family lunch</small></div></div>
-<div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Puff-Puff.jpg" alt="Puff puff"><div><b>Puff Puff</b><small>Snack / treat</small></div></div>
-<div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian-puff-puff-recipe.jpg" alt="Nigerian puff puff"><div><b>Beans & sides</b><small>Everyday budget</small></div></div>
-</div></section>
-<section class="section" style="padding-top:8px"><div class="plan"><span class="tag" style="background:#fff;color:#a90018">Today in your kitchen</span><h2 style="margin-top:10px">A practical meal plan</h2><p>Three meals. Different budgets. No pressure to make every meal expensive.</p><div class="plan-grid"><div class="plan-card"><span class="time">BREAKFAST</span><b>Pap & Akara</b><span>Fast and filling</span><div class="budget">₦ Easy</div></div><div class="plan-card"><span class="time">LUNCH</span><b>Jollof + Chicken</b><span>Family-friendly</span><div class="budget">₦₦ Mid</div></div><div class="plan-card"><span class="time">DINNER</span><b>Yam & Egg Sauce</b><span>Simple comfort</span><div class="budget">₦ Easy</div></div></div></div></section>
-<section class="section"><div class="section-head"><div><span class="eyebrow">Built for everyone</span><h2>Whether you're managing ₦ or ₦₦₦.</h2></div></div><div class="audience"><p style="margin-top:0">FeedMe should not assume every Nigerian household shops, cooks or budgets the same way. Choose ideas by what fits your day.</p><div class="audience-row"><span>🏠 Simple home meals</span><span>🎓 Student budget</span><span>💼 Busy professional</span><span>👨‍👩‍👧 Family meals</span><span>✨ Weekend treats</span><span>🛒 No-shopping meals</span></div></div></section>
-<section class="section"><div class="value-grid"><div class="value"><div class="value-icon">🥘</div><b>Use what you have</b><p>Add rice, beans, yam, eggs, plantain and other stock. Get meals that actually match it.</p></div><div class="value"><div class="value-icon">⏱️</div><b>Cook around your time</b><p>Find quick meals for rushed days and slower meals when you have time.</p></div><div class="value"><div class="value-icon">₦</div><b>Keep your budget in mind</b><p>Compare everyday, moderate and treat-style meal ideas.</p></div><div class="value"><div class="value-icon">❤️</div><b>Learn your taste</b><p>Rate meals and keep a cooking history so suggestions become more useful.</p></div></div></section>
-<section class="section"><div class="download"><span class="eyebrow" style="background:#fff;color:#a90018">Coming to mobile</span><h2 style="margin-top:12px;color:#fff">FeedMe in your pocket.</h2><p>Get the same meal planning experience on your phone. The store buttons are placeholders until the native apps are published.</p><div class="store-row"><button class="store" onclick="showToast('App Store listing coming soon')"> <span><small>Download on the</small><strong>App Store</strong></span></button><button class="store" onclick="showToast('Google Play listing coming soon')">▶ <span><small>GET IT ON</small><strong>Google Play</strong></span></button></div><div class="download-note">No fake download link — these will become live when the apps are published.</div></div></section>
-<div class="footer">FeedMe MVP · Nigerian-focused meal recommendations · Built around practical Nigerian kitchens.</div>
+
+<section id="ideas" class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Meal ideas</span><h2>Food that looks as good as it sounds.</h2></div>
+    <p>Real Nigerian dishes, presented clearly so the picture, meal name and recommendation always make sense together.</p>
+  </div>
+  <div class="meal-strip">
+    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_jollof_rice.jpg" alt="Jollof rice"><div><b>Jollof Rice</b><small>Everyday favourite</small></div></div>
+    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Original_Nigerian_Egusi_soup_and_yellow_garri_(Eba).jpg" alt="Egusi soup and eba"><div><b>Egusi & Eba</b><small>Rich & filling</small></div></div>
+    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Suya.jpg" alt="Nigerian suya"><div><b>Suya</b><small>Quick treat</small></div></div>
+    <div class="mini-food"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Pounded_Yam_and_Egusi_Soup.jpg" alt="Pounded yam and egusi soup"><div><b>Pounded Yam & Egusi</b><small>Family lunch</small></div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:8px">
+  <div class="plan">
+    <span class="tag" style="background:#fff;color:#a90018">TODAY’S MEAL PLAN</span>
+    <h2 style="margin-top:10px">A practical day of meals.</h2>
+    <p>Breakfast, lunch and dinner — with options that make sense for different schedules and budgets.</p>
+    <div class="plan-grid">
+      <div class="plan-card"><span class="time">BREAKFAST</span><b>Pap & Akara</b><span>Fast and filling</span><div class="budget">₦ Easy</div></div>
+      <div class="plan-card"><span class="time">LUNCH</span><b>Jollof + Chicken</b><span>Family-friendly</span><div class="budget">₦₦ Mid</div></div>
+      <div class="plan-card"><span class="time">DINNER</span><b>Yam & Egg Sauce</b><span>Simple comfort</span><div class="budget">₦ Easy</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><span class="eyebrow">Made for real life</span><h2>One app. Different kitchens.</h2></div></div>
+  <div class="audience"><p>FeedMe doesn't assume every Nigerian household cooks or budgets the same way.</p>
+    <div class="audience-row"><span>🎓 Student budget</span><span>🏠 Everyday home meals</span><span>💼 Busy professional</span><span>👨‍👩‍👧 Family meals</span><span>✨ Weekend treats</span><span>🛒 No-shopping meals</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="value-grid">
+    <div class="value"><div class="value-icon">🥘</div><b>Use what you have</b><p>Match meals to ingredients already in your kitchen.</p></div>
+    <div class="value"><div class="value-icon">⏱️</div><b>Cook around your time</b><p>Find quick meals or take your time with family favourites.</p></div>
+    <div class="value"><div class="value-icon">₦</div><b>Keep your budget in mind</b><p>Choose everyday, moderate or treat-style meals.</p></div>
+    <div class="value"><div class="value-icon">❤️</div><b>Learn your taste</b><p>Rate meals and build a useful cooking history.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="download"><span class="eyebrow" style="background:#fff;color:#a90018">COMING TO MOBILE</span><h2 style="margin-top:12px;color:#fff">FeedMe in your pocket.</h2>
+    <p>Save meal ideas, track your kitchen stock and plan your day wherever you are.</p>
+    <div class="store-row"><button class="store" onclick="showToast('App Store listing coming soon')"> <span><small>Download on the</small><strong>App Store</strong></span></button>
+    <button class="store" onclick="showToast('Google Play listing coming soon')">▶ <span><small>GET IT ON</small><strong>Google Play</strong></span></button></div>
+    <div class="download-note">Store buttons will become live when the native apps are published.</div>
+  </div>
+</section>
+<div class="footer">FeedMe MVP · Practical Nigerian meal recommendations.</div>
 </section>
 <section id="app" class="app">
 <div class="appbar"><div class="row"><button class="btn" onclick="back()">← Back</button><div class="brand"><span class="logo">🍲</span>FeedMe</div><button class="btn" onclick="back()">Sign out</button></div></div>
-<div class="card" style="margin-top:14px"><span class="eyebrow">Your kitchen</span><h2 style="margin-top:10px">What should we cook today?</h2><p class="muted">Use your stock, time and budget to get a useful suggestion.</p><button class="btn primary wide" onclick="suggest()">✨ Suggest a meal</button><div id="modeNote" class="notice hidden"></div></div>
+<div class="card" style="margin-top:14px"><span class="eyebrow">Your kitchen</span><h2 style="margin-top:10px">Let’s make something.</h2><p class="muted">Use your stock, time and budget to get a useful suggestion.</p><button class="btn primary wide" onclick="suggest()">✨ Suggest a meal</button><div id="modeNote" class="notice hidden"></div></div>
 <div class="tabs"><button class="btn active" onclick="tab('home',this)">Home</button><button class="btn" onclick="tab('stock',this)">My Stock</button><button class="btn" onclick="tab('meals',this)">Meal Ideas</button><button class="btn" onclick="tab('history',this)">History</button></div>
 <section id="home" class="card"><div class="actions"><button class="btn" onclick="setMode('store')">🏠 No shopping</button><button class="btn" onclick="setMode('quick')">⚡ 30 mins</button><button class="btn" onclick="setMode('budget')">₦ Everyday budget</button></div><div id="rec"></div></section>
 <section id="stock" class="card hidden"><h2>Food in stock</h2><p class="muted">Add what is already in your kitchen.</p><input class="input" id="ing" placeholder="e.g. rice, eggs, tomatoes"><button class="btn primary wide" onclick="add()">＋ Add to stock</button><div id="stocks"></div></section>
-<section id="meals" class="card hidden"><div class="mealhero"><span class="tag" style="background:#fff;color:#a90018">🇳🇬 Nigerian food</span><h2 style="margin:10px 0 4px;color:#fff">Meals you'll actually want to cook.</h2><p style="margin:0">Breakfast, lunch, dinner, quick plates, budget meals and weekend treats.</p></div><div class="mealfilters"><button class="btn active" onclick="filterMeals('All',this)">All</button><button class="btn" onclick="filterMeals('Breakfast',this)">Breakfast</button><button class="btn" onclick="filterMeals('Lunch',this)">Lunch</button><button class="btn" onclick="filterMeals('Dinner',this)">Dinner</button><button class="btn" onclick="filterMeals('Budget',this)">Budget</button><button class="btn" onclick="filterMeals('Quick',this)">Quick</button><button class="btn" onclick="filterMeals('Treat',this)">Treat</button></div><div class="card" style="background:#fff8e8;margin-bottom:10px"><b>🍽️ Practical meal-time table</b><div class="time-grid" style="margin-top:10px"><div class="time-card"><b>BREAKFAST</b><strong>Pap & Akara</strong><span class="muted">7–10am · ₦ Easy</span></div><div class="time-card"><b>LUNCH</b><strong>Rice & Stew</strong><span class="muted">12–3pm · ₦₦ Mid</span></div><div class="time-card"><b>DINNER</b><strong>Yam & Egg</strong><span class="muted">6–9pm · ₦ Easy</span></div></div></div><div class="grid" id="mealGrid"></div></section>
+<section id="meals" class="card hidden"><div class="mealhero"><span class="tag" style="background:#fff;color:#a90018">🇳🇬 Nigerian food</span><h2 style="margin:10px 0 4px;color:#fff">Meals you’ll actually want to make.</h2><p style="margin:0">Breakfast, lunch, dinner, quick plates, budget meals and weekend treats — with visuals that match the meal.</p></div><div class="mealfilters"><button class="btn active" onclick="filterMeals('All',this)">All</button><button class="btn" onclick="filterMeals('Breakfast',this)">Breakfast</button><button class="btn" onclick="filterMeals('Lunch',this)">Lunch</button><button class="btn" onclick="filterMeals('Dinner',this)">Dinner</button><button class="btn" onclick="filterMeals('Budget',this)">Budget</button><button class="btn" onclick="filterMeals('Quick',this)">Quick</button><button class="btn" onclick="filterMeals('Treat',this)">Treat</button></div><div class="card" style="background:#fff8e8;margin-bottom:10px"><b>🍽️ Practical meal-time table</b><div class="time-grid" style="margin-top:10px"><div class="time-card"><b>BREAKFAST</b><strong>Pap & Akara</strong><span class="muted">7–10am · ₦ Easy</span></div><div class="time-card"><b>LUNCH</b><strong>Rice & Stew</strong><span class="muted">12–3pm · ₦₦ Mid</span></div><div class="time-card"><b>DINNER</b><strong>Yam & Egg</strong><span class="muted">6–9pm · ₦ Easy</span></div></div></div><div class="grid" id="mealGrid"></div></section>
 <section id="history" class="card hidden"><h2>Cooking History</h2><div id="hist" class="muted">No meals cooked yet.</div></section>
 </section></div>
 <div id="modal" class="modal" onclick="if(event.target.id==='modal')closeSignIn()"><div class="sheet"><button class="btn sheet-close" onclick="closeSignIn()">×</button><span class="eyebrow">Welcome back</span><h2 style="margin-top:12px">Sign in to your kitchen</h2><p class="muted">Enter your email to continue. This MVP keeps your session on this device.</p><input class="input" id="email" type="email" placeholder="you@example.com"><button class="btn primary wide" onclick="signIn()">Continue to FeedMe</button></div></div>
@@ -58,12 +212,12 @@ Moi:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Images_of_a_local_
 Puff:'https://commons.wikimedia.org/wiki/Special:Redirect/file/Puff-Puff.jpg'
 };
 const M=[
-['Jollof Rice','rice,tomatoes,onion,oil','Rice','45 min','Lunch','Mid',IMG.Jollof],['Fried Rice','rice,vegetables,egg,oil','Rice','35 min','Lunch','Mid',IMG.Jollof],['Ofada Rice & Sauce','ofada rice,pepper,onion','Rice','50 min','Lunch','Mid',IMG.Jollof],
-['Beans & Fried Plantain','beans,plantain,onion,oil','Beans','50 min','Lunch','Easy',IMG.Moi],['Beans Porridge','beans,palm oil,onion','Beans','55 min','Dinner','Easy',IMG.Moi],['Moi Moi','beans,pepper,onion,oil','Breakfast','60 min','Breakfast','Easy',IMG.Moi],
+['Jollof Rice','rice,tomatoes,onion,oil','Rice','45 min','Lunch','Mid',IMG.Jollof],['Fried Rice','rice,vegetables,egg,oil','Rice','35 min','Lunch','Mid','https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85'],['Ofada Rice & Sauce','ofada rice,pepper,onion','Rice','50 min','Lunch','Mid','https://commons.wikimedia.org/wiki/Special:Redirect/file/Ofada_rice_and_sauce.jpg'],
+['Beans & Fried Plantain','beans,plantain,onion,oil','Beans','50 min','Lunch','Easy','https://commons.wikimedia.org/wiki/Special:Redirect/file/Beans_and_plantain.jpg'],['Beans Porridge','beans,palm oil,onion','Beans','55 min','Dinner','Easy','https://commons.wikimedia.org/wiki/Special:Redirect/file/Nigerian_beans_porridge.jpg'],['Moi Moi','beans,pepper,onion,oil','Breakfast','60 min','Breakfast','Easy',IMG.Moi],
 ['Yam & Egg Sauce','yam,eggs,tomatoes,onion','Yam','30 min','Dinner','Easy',IMG.Yam],['Yam Porridge','yam,palm oil,pepper,onion','Yam','45 min','Dinner','Easy',IMG.Yam],['Yam & Yamarita','yam,eggs,flour,oil','Yam','35 min','Dinner','Mid',IMG.Yam],
 ['Egusi Soup & Eba','egusi,leafy vegetables,palm oil,protein,garri','Soup','55 min','Dinner','Mid',IMG.Egusi],['Okro Soup & Eba','okro,palm oil,pepper,protein,garri','Soup','40 min','Dinner','Mid',IMG.Egusi],['Pounded Yam & Egusi','yam,egusi,leafy vegetables,protein','Soup','60 min','Lunch','Mid',IMG.Yam],
-['Jollof Spaghetti','spaghetti,tomatoes,pepper,onion','Quick','30 min','Lunch','Easy',IMG.Jollof],['Noodles & Egg','noodles,vegetables,egg','Quick','15 min','Breakfast','Easy',IMG.Moi],['Egg & Tomato Toast','bread,eggs,tomatoes,onion','Breakfast','15 min','Breakfast','Easy',IMG.Moi],['Pap & Akara','pap,beans,onion,oil','Breakfast','30 min','Breakfast','Easy',IMG.Puff],
-['Suya & Onions','beef,suya spice,onion','Protein','25 min','Treat','Mid',IMG.Suya],['Pepper Soup','protein,pepper,onion,spices','Protein','45 min','Dinner','Mid',IMG.Suya],['Puff Puff','flour,yeast,sugar,oil','Treat','35 min','Treat','Easy',IMG.Puff],['Fish & Plantain','fish,plantain,pepper,onion','Protein','35 min','Dinner','Mid',IMG.Suya]
+['Jollof Spaghetti','spaghetti,tomatoes,pepper,onion','Quick','30 min','Lunch','Easy',IMG.Jollof],['Noodles & Egg','noodles,vegetables,egg','Quick','15 min','Breakfast','Easy','https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85'],['Egg & Tomato Toast','bread,eggs,tomatoes,onion','Breakfast','15 min','Breakfast','Easy',IMG.Moi],['Pap & Akara','pap,beans,onion,oil','Breakfast','30 min','Breakfast','Easy',IMG.Puff],
+['Suya & Onions','beef,suya spice,onion','Protein','25 min','Treat','Mid',IMG.Suya],['Pepper Soup','protein,pepper,onion,spices','Protein','45 min','Dinner','Mid',IMG.Suya],['Puff Puff','flour,yeast,sugar,oil','Treat','35 min','Treat','Easy','https://commons.wikimedia.org/wiki/Special:Redirect/file/Puff-Puff.jpg'],['Fish & Plantain','fish,plantain,pepper,onion','Protein','35 min','Dinner','Mid',IMG.Suya]
 ];
 let S=JSON.parse(localStorage.getItem('feedme_stock')||'[]'),H=JSON.parse(localStorage.getItem('feedme_history')||'[]'),mode='',mealFilter='All';
 const save=()=>{localStorage.setItem('feedme_stock',JSON.stringify(S));localStorage.setItem('feedme_history',JSON.stringify(H));};
