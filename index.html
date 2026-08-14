@@ -79,4 +79,14 @@ function recipe(i){let m=M[i];rec.innerHTML=`<div class="card"><div class="meal-
 function cook(i){H.unshift({n:M[i][0],d:new Date().toLocaleDateString()});M[i][1].split(',').filter(x=>S.includes(x)).forEach(x=>S.splice(S.indexOf(x),1));save();rec.innerHTML=`<div class="card"><h2>Meal cooked! 🎉</h2><p class="muted">Your matching stock ingredients have been updated.</p><p>How did you like <b>${M[i][0]}</b>?</p><div style="display:flex;gap:6px;flex-wrap:wrap">${[1,2,3,4,5].map(n=>`<button class="btn" onclick="rate(${n})">${n}★</button>`).join('')}</div><p id="rated" class="muted"></p></div>`;renderStock()}
 function rate(n){rated.textContent=`Thanks for your ${n}/5 rating. FeedMe can use this feedback in future suggestions.`}function renderHistory(){hist.innerHTML=H.length?H.map(x=>`<div class="stock"><span>🍽️ ${x.n}</span><span>${x.d}</span></div>`).join(''):'No meals cooked yet.'}function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}
 renderMeals();renderStock();
+</script><script>
+const FEEDME_MEAL_IMAGES={
+"Jollof Rice":"https://images.unsplash.com/photo-1604329760661-e71dc83c7f8a?auto=format&fit=crop&w=900&q=85",
+"Jollof Rice & Chicken":"https://images.unsplash.com/photo-1604329760661-e71dc83c7f8a?auto=format&fit=crop&w=900&q=85",
+"Fried Rice & Chicken":"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85",
+"Suya":"https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=900&q=85",
+"Noodles & Egg":"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=900&q=85"};
+function feedMeImageFor(n){n=(n||'').trim();return FEEDME_MEAL_IMAGES[n]||null}
+function applyFeedMeMealImages(root=document){root.querySelectorAll('[data-meal-name]').forEach(c=>{let n=c.dataset.mealName,u=feedMeImageFor(n),i=c.querySelector('img');if(u&&i){i.src=u;i.alt=n+' — Nigerian meal';i.loading='lazy'}})}
+document.addEventListener('DOMContentLoaded',()=>applyFeedMeMealImages());
 </script></body></html>
