@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#b5121b">
+<title>FeedMe — Nigerian food, made easier</title>
+<style>
+:root{--red:#b5121b;--deep:#780d13;--bg:#fffaf7;--ink:#211d1b;--muted:#746b67;--line:#eaded9;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input{font:inherit}.wrap{max-width:680px;margin:auto}.landing{min-height:100vh;padding:18px;background:linear-gradient(#fff,#fff8f5,#fff)}
+.nav,.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{display:flex;align-items:center;gap:9px;font-size:21px;font-weight:900;color:var(--red)}
+.logo{width:38px;height:38px;border-radius:12px;background:var(--red);display:grid;place-items:center;color:#fff}.btn{border:1px solid var(--line);background:#fff;border-radius:13px;padding:11px 14px;font-weight:800;color:var(--ink)}
+.primary{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 9px 20px #b5121b30}.hero{padding:52px 0 26px}.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:900;color:var(--red)}
+h1{font-size:48px;line-height:1.02;letter-spacing:-.05em;margin:10px 0 14px}h1 span{color:var(--red)}
+h2{letter-spacing:-.02em}p{line-height:1.55;color:var(--muted)}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}
+.pills{display:flex;gap:7px;flex-wrap:wrap}.pill,.tag{display:inline-block;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800}
+.pill{background:#fff;border:1px solid var(--line)}.tag{background:#fff0f0;color:var(--red)}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}.dish{height:145px;border-radius:19px;padding:13px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#c62832,#780d13)}
+.dish:nth-child(2){background:linear-gradient(145deg,#d9862d,#8b3511)}.dish:nth-child(3){background:linear-gradient(145deg,#7c8f39,#334b20)}
+.section{padding:28px 0}.features{display:grid;gap:10px}.feature,.card,.meal{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.feature strong{display:block;margin-bottom:5px}.feature p{font-size:13px;margin:0}.quote{background:var(--red);color:#fff;border-radius:21px;padding:20px;margin:5px 0 24px}.quote p{color:#fff;font-size:18px;margin:0}
+.footer{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}.app{display:none;min-height:100vh;background:#f8f5f3;padding:0 15px 70px}
+.appbar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:13px 0}.tabs{display:flex;gap:7px;overflow:auto;padding:12px 0}.tabs button{white-space:nowrap}.tabs .active{background:var(--red);color:#fff;border-color:var(--red)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.meal h3{font-size:15px;margin:7px 0 4px}.meal p{font-size:12px;margin:0}.wide{width:100%;margin-top:10px}.hidden{display:none}
+.input{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;margin:7px 0;background:#fff}.stock{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0e8e4}
+.modal{display:none;position:fixed;inset:0;background:#0008;align-items:flex-end;z-index:20}.modal.open{display:flex}.sheet{background:#fff;width:100%;max-width:680px;margin:auto;border-radius:24px 24px 0 0;padding:22px 18px 30px}.muted{color:var(--muted);font-size:13px}
+.notice{padding:12px;border-radius:12px;background:#fff0f0;color:var(--deep);font-size:13px;margin-top:10px}
+@media(max-width:480px){h1{font-size:41px}.dishes{grid-template-columns:1fr 1fr}.dish:last-child{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section id="landing" class="landing">
+<nav class="nav">
+<div class="brand"><span class="logo">🍲</span>FeedMe</div>
+<button class="btn" onclick="openSignIn()">Sign in</button>
+</nav>
+<div class="hero">
+<div class="eyebrow">Made for Nigerian kitchens</div>
+<h1>Know what to cook.<br><span>Use what you have.</span></h1>
+<p>FeedMe turns the food already in your kitchen into practical Nigerian meal ideas, while keeping household preferences and budget in mind.</p>
+<div class="actions"><button class="btn primary" onclick="enterApp()">Start cooking →</button><button class="btn" onclick="document.getElementById('learn').scrollIntoView({behavior:'smooth'})">See how it works</button></div>
+<div class="pills"><span class="pill">🇳🇬 Nigerian meals</span><span class="pill">₦ Budget-aware</span><span class="pill">🏠 Store-Only</span></div>
+</div>
+<div class="dishes"><div class="dish"><b>Jollof Rice</b><small>Everyday favourite</small></div><div class="dish"><b>Egusi Soup</b><small>Rich & familiar</small></div><div class="dish"><b>Beans & Plantain</b><small>Simple & filling</small></div></div>
+<div id="learn" class="section"><h2>A kitchen companion, not another food app.</h2><p>Built around Nigerian households: what is available, what the family likes, what fits the pocket and what you cooked recently.</p>
+<div class="features"><div class="feature"><strong>🍚 Start with your stock</strong><p>Add rice, beans, yam, plantain, eggs, tomatoes, palm oil and more.</p></div>
+<div class="feature"><strong>✨ Get a useful suggestion</strong><p>Recommendations respond to stock, preferences, budget and history.</p></div>
+<div class="feature"><strong>🛒 Store-Only</strong><p>Want to cook without shopping? Stay within what you have.</p></div>
+<div class="feature"><strong>❤️ Learn your taste</strong><p>Cook and rate meals so future suggestions become more relevant.</p></div></div></div>
+<div class="quote"><p>“From jollof to egusi, from beans to yam — your kitchen already has a story.”</p></div>
+<div class="section"><h2>Ready when your kitchen is.</h2><p>Open FeedMe, add what you have and get cooking.</p><button class="btn primary wide" onclick="openSignIn()">Sign in to FeedMe</button></div>
+<div class="footer">FeedMe MVP · Nigerian-focused meal recommendations</div>
+</section>
+
+<section id="app" class="app">
+<div class="appbar"><div class="row"><button class="btn" onclick="back()">← Back</button><div class="brand"><span class="logo">🍲</span>FeedMe</div><button class="btn" onclick="back()">Sign out</button></div></div>
+<div class="card" style="margin-top:14px"><h2 style="margin:0">Good to see you.</h2><p class="muted">What should we cook today?</p><button class="btn primary wide" onclick="suggest()">✨ Suggest a meal</button><div id="modeNote" class="notice hidden"></div></div>
+<div class="tabs"><button class="btn active" onclick="tab('home',this)">Home</button><button class="btn" onclick="tab('stock',this)">My Stock</button><button class="btn" onclick="tab('meals',this)">Meal Ideas</button><button class="btn" onclick="tab('history',this)">History</button></div>
+<section id="home" class="card"><div class="actions"><button class="btn" onclick="setMode('store')">🏠 Store-Only</button><button class="btn" onclick="setMode('quick')">⚡ Quick</button><button class="btn" onclick="setMode('budget')">₦ Budget</button></div><div id="rec"></div></section>
+<section id="stock" class="card hidden"><h2>Food in stock</h2><p class="muted">Add ingredients you already have.</p><input class="input" id="ing" placeholder="e.g. rice, eggs, tomatoes"><button class="btn primary wide" onclick="add()">＋ Add to stock</button><div id="stocks"></div></section>
+<section id="meals" class="card hidden"><h2>Meal Ideas</h2><p class="muted">Nigerian meals across rice, beans, yam, soups, quick meals and breakfast.</p><div class="grid" id="mealGrid"></div></section>
+<section id="history" class="card hidden"><h2>Cooking History</h2><div id="hist" class="muted">No meals cooked yet.</div></section>
+</section></div>
+
+<div id="modal" class="modal" onclick="if(event.target.id==='modal')closeSignIn()"><div class="sheet"><button class="btn" style="float:right" onclick="closeSignIn()">×</button><div class="eyebrow">Welcome back</div><h2>Sign in to your kitchen</h2><p class="muted">Enter your email to continue. This MVP keeps your session on this device.</p><input class="input" id="email" type="email" placeholder="you@example.com"><button class="btn primary wide" onclick="signIn()">Continue to FeedMe</button></div></div>
+
+<script>
+const M=[
+['Jollof Rice','rice,tomatoes,onion,oil','Rice','45 min'],['Fried Rice','rice,vegetables,egg,oil','Rice','35 min'],['Coconut Rice','rice,coconut milk,onion','Rice','40 min'],['Ofada Rice & Sauce','ofada rice,pepper,onion','Rice','50 min'],
+['Beans & Fried Plantain','beans,plantain,onion,oil','Beans','50 min'],['Beans Porridge','beans,palm oil,onion','Beans','55 min'],['Moi Moi','beans,pepper,onion,oil','Beans','60 min'],['Akara','beans,onion,pepper,oil','Beans','35 min'],
+['Yam & Egg Sauce','yam,eggs,tomatoes,onion','Yam','30 min'],['Yam Porridge','yam,palm oil,pepper,onion','Yam','45 min'],['Fried Yam & Egg','yam,eggs,oil','Yam','30 min'],
+['Egusi Soup','egusi,leafy vegetables,palm oil,protein','Soup','55 min'],['Okro Soup','okro,palm oil,pepper,protein','Soup','40 min'],['Ogbono Soup','ogbono,palm oil,leafy vegetables,protein','Soup','50 min'],['Ewedu & Stew','ewedu,tomatoes,pepper,oil','Soup','30 min'],['Pepper Soup','protein,pepper,onion,spices','Soup','45 min'],
+['Jollof Spaghetti','spaghetti,tomatoes,pepper,onion','Quick','30 min'],['Stir-fried Noodles','noodles,vegetables,egg','Quick','15 min'],['Egg & Tomato Toast','bread,eggs,tomatoes,onion','Breakfast','15 min'],['Oats & Banana','oats,banana,milk','Breakfast','10 min'],['Pap & Akara','pap,beans,onion,oil','Breakfast','30 min'],['Bread & Egg','bread,eggs,tomatoes','Breakfast','10 min'],
+['Chicken Stew','chicken,tomatoes,pepper,onion','Protein','50 min'],['Fish Pepper Soup','fish,pepper,onion,spices','Protein','35 min']
+];
+let S=JSON.parse(localStorage.getItem('feedme_stock')||'[]'),H=JSON.parse(localStorage.getItem('feedme_history')||'[]'),mode='';
+const save=()=>{localStorage.setItem('feedme_stock',JSON.stringify(S));localStorage.setItem('feedme_history',JSON.stringify(H));};
+function openSignIn(){modal.classList.add('open')}function closeSignIn(){modal.classList.remove('open')}
+function signIn(){if(!email.value.trim())return;localStorage.setItem('feedme_user',email.value.trim());closeSignIn();enterApp()}
+function enterApp(){landing.style.display='none';app.style.display='block';renderMeals();renderStock();suggest()}
+function back(){app.style.display='none';landing.style.display='block';scrollTo(0,0)}
+function tab(id,b){document.querySelectorAll('#app section.card').forEach(x=>x.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');if(id==='stock')renderStock();if(id==='meals')renderMeals();if(id==='history')renderHistory()}
+function add(){let x=ing.value.trim().toLowerCase();if(!x)return;if(!S.includes(x))S.push(x);ing.value='';save();renderStock()}
+function renderStock(){stocks.innerHTML=S.length?S.map((x,i)=>`<div class="stock"><span>🥕 ${x}</span><button class="btn" onclick="S.splice(${i},1);save();renderStock()">Remove</button></div>`).join(''):'<p class="muted">Your stock is empty.</p>'}
+function renderMeals(){mealGrid.innerHTML=M.map((m,i)=>`<article class="meal"><span class="tag">${m[2]}</span><h3>${m[0]}</h3><p>${m[1].replaceAll(', ',', ')}</p><p>⏱ ${m[3]}</p><button class="btn" style="width:100%;margin-top:8px" onclick="recipe(${i})">View recipe</button></article>`).join('')}
+function setMode(x){mode=x;modeNote.classList.remove('hidden');modeNote.textContent=x==='store'?'Store-Only: prioritising meals you can make from your current stock.':x==='quick'?'Quick: prioritising meals that take about 30 minutes or less.':'Budget: prioritising simpler, everyday meal ideas.';suggest()}
+function suggest(){
+let candidates=M.map((m,i)=>{let ingredients=m[1].split(',');let score=ingredients.filter(x=>S.some(z=>z.includes(x)||x.includes(z))).length;return{m,i,score,missing:ingredients.length-score}}).sort((a,b)=>b.score-a.score);
+if(mode==='quick')candidates=candidates.filter(x=>parseInt(x.m[3])<=30);
+if(mode==='budget')candidates=candidates.filter(x=>['Beans','Breakfast','Quick'].includes(x.m[2]));
+let x=candidates[0]||{m:M[0],i:0,score:0,missing:0};
+rec.innerHTML=`<div class="card"><span class="tag">Recommended for you</span><h2>${x.m[0]}</h2><p class="muted">${x.score?`Matches ${x.score} ingredient${x.score>1?'s':''} in your stock.`:'A Nigerian meal idea to explore today.'}</p><p><b>Ingredients:</b> ${x.m[1].replaceAll(', ',', ')}</p>${x.missing?`<p class="muted">Closest match — you may need ${x.missing} ingredient${x.missing>1?'s':''}.</p>`:''}<button class="btn primary wide" onclick="recipe(${x.i})">View recipe</button><button class="btn wide" onclick="suggest()">Suggest another</button></div>`;
+}
+function recipe(i){let m=M[i];rec.innerHTML=`<div class="card"><span class="tag">${m[2]}</span><h2>${m[0]}</h2><p><b>Ingredients:</b> ${m[1].replaceAll(', ',', ')}</p><p><b>Time:</b> ${m[3]}</p><p class="muted"><b>Steps:</b> Prepare ingredients, cook according to the dish, season to taste and serve hot.</p><button class="btn primary wide" onclick="cook(${i})">✓ Mark as cooked</button></div>`}
+function cook(i){H.unshift({n:M[i][0],d:new Date().toLocaleDateString()});M[i][1].split(',').filter(x=>S.includes(x)).forEach(x=>S.splice(S.indexOf(x),1));save();rec.innerHTML=`<div class="card"><h2>Meal cooked! 🎉</h2><p class="muted">Your stock has been updated.</p><p>How did you like <b>${M[i][0]}</b>?</p><div style="display:flex;gap:6px;flex-wrap:wrap">${[1,2,3,4,5].map(n=>`<button class="btn" onclick="rate(${n})">${n}★</button>`).join('')}</div><p id="rated" class="muted"></p></div>`}
+function rate(n){rated.textContent=`Thanks for your ${n}/5 rating. FeedMe can use your cooking history to guide future suggestions.`}
+function renderHistory(){hist.innerHTML=H.length?H.map(x=>`<div class="stock"><span>🍽️ ${x.n}</span><span>${x.d}</span></div>`).join(''):'No meals cooked yet.'}
+renderMeals();renderStock();
+</script>
+</body></html>
